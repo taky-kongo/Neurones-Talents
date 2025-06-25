@@ -1086,3 +1086,150 @@ main section:not(:last-child) {
     margin-bottom: 0.5rem;
   }
 }
+
+/*
+ * Section : Styles spécifiques au composant Contact
+ * Fichier : src/index.css
+ * Description : Styles pour la section de contact, y compris le formulaire.
+ * Assure un design clair et réactif pour le formulaire de contact.
+ */
+
+/* Styles pour le titre principal de la section Contact */
+.contact__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-dark);
+}
+
+/* Styles pour la description de la section Contact */
+.contact__description {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+/* Conteneur du formulaire pour le centrage et la largeur */
+.contact__form-container {
+  max-width: 600px; /* Largeur maximale du formulaire */
+  margin: 0 auto; /* Centrage du formulaire */
+  background-color: var(--color-background-white);
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--color-shadow-light); /* Légère ombre pour la carte du formulaire */
+}
+
+/* Style général du formulaire */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Espacement entre les groupes de champs */
+}
+
+/* Groupe de champ (label + input/textarea) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group__label {
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Styles des champs input et textarea */
+.form-group__input,
+.form-group__textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border-grey);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif; /* Assure la même police */
+  color: var(--color-text-dark);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* S'assure que les champs prennent toute la largeur disponible */
+  box-sizing: border-box; /* Inclut padding et border dans la largeur */
+}
+
+.form-group__input:focus,
+.form-group__textarea:focus {
+  outline: none; /* Supprime l'outline par défaut */
+  border-color: var(--color-primary); /* Bordure bleue au focus */
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2); /* Ombre légère bleue au focus */
+}
+
+/* Style spécifique pour la textarea */
+.form-group--textarea .form-group__textarea {
+  resize: vertical; /* Permet uniquement le redimensionnement vertical */
+  min-height: 100px; /* Hauteur minimale pour la textarea */
+}
+
+/* Style du bouton de soumission */
+.contact__submit-btn {
+  margin-top: 1rem; /* Marge au-dessus du bouton */
+  padding: 1rem 2rem; /* Padding pour un bouton plus grand */
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%; /* Prend toute la largeur du formulaire */
+  box-sizing: border-box; /* Inclut padding et border dans la largeur */
+}
+
+
+/* Media Queries pour le Responsive Design du Contact Form */
+
+/* Tablette (écrans entre 769px et 992px) */
+@media (max-width: 992px) {
+  .contact__title {
+    font-size: 2.2rem;
+  }
+
+  .contact__description {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact__form-container {
+    padding: 2rem;
+  }
+}
+
+/* Mobile (écrans plus petits que 768px) */
+@media (max-width: 768px) {
+  .contact__title {
+    font-size: 2rem;
+  }
+
+  .contact__description {
+    margin-bottom: 2rem;
+  }
+
+  .contact__form-container {
+    padding: 1.5rem; /* Réduit le padding du conteneur sur mobile */
+    max-width: 90vw; /* Utilise une max-width relative au viewport */
+  }
+
+  .form-group {
+    gap: 1rem; /* Réduit l'espacement entre les champs sur mobile */
+  }
+
+  .form-group__label {
+    font-size: 0.95rem;
+  }
+
+  .form-group__input,
+  .form-group__textarea {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .contact__submit-btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+}
