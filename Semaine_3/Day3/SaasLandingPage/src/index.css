@@ -690,6 +690,7 @@ main section:not(:last-child) {
   justify-content: space-between; /* Espace bien le contenu */
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent; /* Bordure transparente par défaut */
+  box-sizing: border-box;
 }
 
 .pricing-card:hover {
@@ -832,7 +833,7 @@ main section:not(:last-child) {
 
   .pricing-card {
     width: 100%; /* Occupe toute la largeur disponible */
-    max-width: 350px; /* Limite la largeur sur les très grands mobiles */
+    max-width: 90vw; /* Limite la largeur sur les très grands mobiles */
     padding: 2rem 1.5rem;
   }
 
