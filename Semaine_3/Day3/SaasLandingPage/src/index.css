@@ -570,6 +570,7 @@ main section:not(:last-child) {
   min-width: 300px; /* Largeur minimale pour les cartes */
   max-width: 45%; /* Limite la largeur à moins de 50% pour qu'il y en ait 2 par ligne */
   transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 .testimonial-card:hover {
@@ -634,7 +635,7 @@ main section:not(:last-child) {
 
   .testimonial-card {
     width: 100%; /* Occupe toute la largeur disponible */
-    max-width: 400px; /* Limite la largeur pour ne pas être trop large sur les très grands mobiles */
+    max-width: 90vw; /* Limite la largeur pour ne pas être trop large sur les très grands mobiles */
     padding: 1.8rem;
   }
 
